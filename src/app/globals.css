@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-unbounded: 'Unbounded', sans-serif;
+  --font-satoshi-bold: 'Satoshi Bold', sans-serif;
+  --font-satoshi-regular: 'Satoshi Regular', sans-serif;
+  --font-satoshi-medium: 'Satoshi Medium', sans-serif;
+}
+
+.font-unbounded {
+  font-family: var(--font-unbounded);
+}
+
+.font-satoshi-bold {
+  font-family: var(--font-satoshi-bold);
+}
+
+.font-satoshi-regular {
+  font-family: var(--font-satoshi-regular);
+}
+
+.font-satoshi-medium {
+  font-family: var(--font-satoshi-medium);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@media screen (min-width: 768px) {
+  body {
+    scroll-snap-type: y mandatory;
+  }
+}

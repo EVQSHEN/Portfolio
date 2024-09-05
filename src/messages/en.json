@@ -1,0 +1,24 @@
+{
+  "Page": {
+    "Hey": "HEY, I’m Danil Basanets",
+    "JobTitle": "Front-end developer",
+    "Resume": "Resume",
+    "MySkills": "My Skills",
+    "Projects": "Projects",
+    "Contacts": "CONNECT WITH ME",
+    "Contact": "Contact",
+    "About": "About me",
+    "AboutMe1": "I am a dedicated and motivated web developer with over 2 years of programming experience. I enjoy working in a team, actively contributing to common goals and making projects successful.",
+    "AboutMe2": "My passion for continuous learning and professional growth motivates me to take on new challenges and apply my diverse skills in different areas. My main focus is frontend development, but I also have experience working with the backend.",
+    "AboutMe3": "My key skills:",
+    "Home": "Home",
+    "WeatherApp": "This iOS mobile app provides users with up-to-date weather information in real-time. Users can see current conditions, forecasts for several days ahead, humidity, pressure, wind speed, and other meteorological data.",
+    "TodoApp": "The web application is built for task management, allowing users to track and organize tasks effectively.",
+    "SpotifyApp": "The web application was created using modern web technologies for streaming music. The project allows users to listen to their favorite tracks, create playlists, and discover new music.",
+    "HRMApp": "The web application is designed to manage personnel and automate key HR processes, including leave management, time tracking, and HR document management.",
+    "SourceCode": "Source code",
+    "Link": "View project",
+
+    "title": "Internationalisation avec Next.js 14"
+  }
+}
