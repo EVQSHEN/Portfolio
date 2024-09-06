@@ -59,6 +59,7 @@ export default function Page() {
   return (
     <>
       <section id="0" className="h-screen sm:min-h-[calc(100vh-12px)] w-full">
+        <LocaleSwitcher />
         <Image className="m-auto pt-2" priority src={FaceID} alt="FaceID" width={50} height={50} />
         <div className="flex justify-center items-center w-full h-[calc(100vh-20vh)] ">
           <div className="bg-custom-gray w-4/5 h-4/5 sm:h-2/4 min-h-[233px] rounded-xl flex flex-col sm:flex-row items-center relative ">
