@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import API from '/public/Skills/API.png';
@@ -15,15 +16,36 @@ import Postgresql from '/public/Skills/Postgresql.png';
 import Tailwind from '/public/Skills/TailwindCSS.png';
 import SCSS from '/public/Skills/SCSS.png';
 import ResponsiveDesign from '/public/Skills/ResponsiveDesign.png';
+import { motion } from 'framer-motion';
+
+const whileInView = {
+  opacity: 1,
+  x: 0,
+  transition: {
+    duration: 1,
+  },
+};
+
+const initial = {
+  opacity: 0,
+  x: -30,
+};
+
+const viewport = { once: false };
 
 const Skills = () => {
   return (
     <>
-      <div className="flex justify-center flex-wrap sm:flex-nowrap">
+      <motion.div
+        className="flex justify-center flex-wrap sm:flex-nowrap"
+        initial={initial}
+        whileInView={whileInView}
+        viewport={viewport}
+      >
         {dataRow1.map((el) => (
           <div
             key={el.title}
-            className="lg:p-4 tall:p-2 p-2 w-fit tall:w-fit lg:w-[156px] h-18 flex items-center bg-custom-gray rounded-lg mr-4 mb-4"
+            className="lg:p-4 tall:p-2 p-2 w-fit tall:w-fit lg:w-[156px] h-18 flex items-center bg-custom-gray rounded-lg mx-1.5 mb-4"
           >
             <Image
               src={el.image}
@@ -33,12 +55,17 @@ const Skills = () => {
             <p className={`text-custom-lightGray text-sm" ${el?.className}`}>{el.title}</p>
           </div>
         ))}
-      </div>
-      <div className="flex justify-center flex-wrap sm:flex-nowrap">
+      </motion.div>
+      <motion.div
+        initial={{ ...initial, x: 30 }}
+        whileInView={whileInView}
+        viewport={viewport}
+        className="flex justify-center flex-wrap sm:flex-nowrap"
+      >
         {dataRow2.map((el) => (
           <div
             key={el.title}
-            className="lg:p-4 tall:p-2 p-2 w-fit tall:w-fit lg:w-[156px] h-18 flex items-center bg-custom-gray rounded-lg mr-4 mb-4"
+            className="lg:p-4 tall:p-2 p-2 w-fit tall:w-fit lg:w-[156px] h-18 flex items-center bg-custom-gray rounded-lg mx-1.5 mb-4"
           >
             <Image
               src={el.image}
@@ -48,12 +75,17 @@ const Skills = () => {
             <p className={`text-custom-lightGray text-sm" ${el?.className}`}>{el.title}</p>
           </div>
         ))}
-      </div>
-      <div className="flex justify-center flex-wrap sm:flex-nowrap">
+      </motion.div>
+      <motion.div
+        initial={initial}
+        whileInView={whileInView}
+        viewport={viewport}
+        className="flex justify-center flex-wrap sm:flex-nowrap"
+      >
         {dataRow3.map((el) => (
           <div
             key={el.title}
-            className="lg:p-4 tall:p-2 p-2 w-fit tall:w-fit lg:w-[156px] h-18 flex items-center bg-custom-gray rounded-lg mr-4 mb-4"
+            className="lg:p-4 tall:p-2 p-2 w-fit tall:w-fit lg:w-[156px] h-18 flex items-center bg-custom-gray rounded-lg mx-1.5 mb-4"
           >
             <Image
               src={el.image}
@@ -63,7 +95,7 @@ const Skills = () => {
             <p className={`text-custom-lightGray text-sm" ${el?.className}`}>{el.title}</p>
           </div>
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };

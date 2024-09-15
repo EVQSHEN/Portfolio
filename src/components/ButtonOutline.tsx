@@ -12,7 +12,7 @@ const ButtonOutline: React.FC<props> = ({ className, href, target, children }) =
     <a
       href={href ? href : undefined}
       target={target ? target : ''}
-      className={`border-2 border-custom-lightGray rounded-md text-center px-2 py-1.5  text-custom-lightGray text-nowrap hover:border-white hover:text-white ease-linear duration-300 cursor-default ${className}`}
+      className={`border-2 border-custom-lightGray rounded-md text-center px-2 text-custom-lightGray text-nowrap hover:border-gray-300 hover:text-gray-300 ease-linear duration-300 cursor-default ${className}`}
     >
       {children}
     </a>

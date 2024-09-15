@@ -35,7 +35,7 @@ const Project: React.FC<props> = ({
   return (
     <section
       id={id ? id : ''}
-      className={`h-auto sm:h-screen tall:h-auto  p-5 ${
+      className={`h-auto sm:h-[calc(100dvh)] tall:h-auto  p-5 ${
         titleProject ? ' sm:p-10 sm:pt-4' : 'sm:p-10 '
       } sm:snap-center sm:snap-always`}
     >
@@ -115,13 +115,17 @@ const Project: React.FC<props> = ({
               <Button
                 href={href}
                 target="_blank"
-                className="flex justify-center items-center w-40 mr-3"
+                className="flex justify-center items-center w-40 mr-3 h-11"
               >
                 <GitHubIcon className="mr-3 fill-[#FFC1A6]" />
                 <p className="text-nowrap">{t('SourceCode')}</p>
               </Button>
               {hrefWeb && (
-                <ButtonOutline href={hrefWeb} target="_blank" className="flex justify-center w-32">
+                <ButtonOutline
+                  href={hrefWeb}
+                  target="_blank"
+                  className="flex items-center w-32 cursor-pointer pb-0.5 h-11"
+                >
                   {t('Link')}
                 </ButtonOutline>
               )}

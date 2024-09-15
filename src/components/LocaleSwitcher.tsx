@@ -6,7 +6,6 @@ import { useTransition } from 'react';
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
-
   const [isPending, startTransition] = useTransition();
 
   function onChange(value: string) {

@@ -44,7 +44,7 @@ const Nav = () => {
   ];
 
   return (
-    <div className="hidden tall:hidden absolute bottom-5 w-screen lg:flex justify-center">
+    <div className="hidden tall:hidden absolute bottom-5 w-screen lg:flex justify-center items-center">
       <div className="w-[280px] flex bg-custom-black/50 backdrop-blur-lg p-2 rounded-xl">
         {icons.map((icon, indx) => (
           <a
@@ -52,7 +52,9 @@ const Nav = () => {
             data-tooltip-content={t(`${icon.id}`)}
             data-tooltip-place="top"
             key={icon.id}
-            className="w-16 h-16 flex justify-center items-center rounded-xl bg-custom-gray mr-2 cursor-pointer group"
+            className={`w-16 h-16 flex justify-center items-center rounded-xl bg-custom-gray ${
+              indx === 3 ? '' : 'mr-2 '
+            }cursor-pointer group`}
             onClick={() => scroll(String(indx))}
           >
             <svg
