@@ -63,8 +63,8 @@ const Project: React.FC<props> = ({
               src={image}
               alt=""
               fill
+              quality={100}
               className={`${classNameImage} object-contain pb-7 sm:py-0`}
-              sizes="(max-width: 640px) 100vw, (min-width: 641px) and (max-width: 1024px) 50vw, 33vw"
             />
           </div>
         </motion.div>
@@ -124,7 +124,7 @@ const Project: React.FC<props> = ({
                 <ButtonOutline
                   href={hrefWeb}
                   target="_blank"
-                  className="flex items-center w-32 cursor-pointer pb-0.5 h-11"
+                  className="flex items-center cursor-pointer pb-0.5 px-3 h-11"
                 >
                   {t('Link')}
                 </ButtonOutline>

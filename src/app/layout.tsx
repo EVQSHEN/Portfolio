@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Barlow } from 'next/font/google';
@@ -27,6 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       >
         <NextIntlClientProvider messages={messages}>
           <main className="bg-custom-black tall:snap-none sm:snap-start">{children}</main>
+          <Analytics />
           <Nav />
         </NextIntlClientProvider>
       </body>
