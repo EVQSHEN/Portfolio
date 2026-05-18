@@ -19,6 +19,7 @@ const Kitty = () => {
       <Image
         src={KittyGif}
         priority
+        unoptimized
         onClick={handleClick}
         alt="KittyGIF"
         className={`absolute w-14 h-14 top-1 right-7 ${
@@ -28,6 +29,7 @@ const Kitty = () => {
       <Image
         src={KittyLoveGif}
         priority
+        unoptimized
         onClick={handleClick}
         alt="KittyGIF"
         className={`absolute w-14 h-14 top-1 right-7 ${isAnimated ? 'block' : 'hidden'}`}

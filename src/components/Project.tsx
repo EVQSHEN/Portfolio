@@ -44,7 +44,7 @@ const Project: React.FC<props> = ({
       )}
       <div className="flex flex-col tall:flex-col sm:flex-row justify-center">
         <motion.div
-          className="sm:w-1/2  flex justify-center items-center relative h-[50vh] w-full tall:w-full sm:h-[calc(100vh-80px)] sm:mr-7"
+          className="sm:w-1/2  flex justify-center items-center relative h-[50dvh] w-full tall:w-full sm:h-[calc(100vh-80px)] sm:mr-7"
           initial={{
             opacity: 0,
             x: -50,
@@ -61,9 +61,9 @@ const Project: React.FC<props> = ({
           <div className="relative w-full h-full">
             <Image
               src={image}
+              priority
               alt=""
               fill
-              quality={100}
               className={`${classNameImage} object-contain pb-7 sm:py-0`}
             />
           </div>
