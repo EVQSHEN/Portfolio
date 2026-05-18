@@ -22,9 +22,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="bg-custom-black flex h-[calc(100dvh)] p-0 m-0 overflow-hidden">
+    <html lang={locale} className="bg-custom-black p-0 m-0">
       <body
-        className={`${unbounded.className} text-lg flex-1 h-[calc(100dvh)] overflow-x-hidden overflow-y-auto tall:snap-none sm:snap-y sm:snap-mandatory text-white `}
+        className={`${unbounded.className} text-lg overflow-x-hidden overflow-y-auto tall:snap-none sm:snap-y sm:snap-mandatory text-white`}
       >
         <NextIntlClientProvider messages={messages}>
           <main className="bg-custom-black tall:snap-none sm:snap-start">{children}</main>
